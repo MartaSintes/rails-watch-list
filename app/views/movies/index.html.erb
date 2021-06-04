@@ -1,10 +1,11 @@
 <h1>List of movies</h1>
 
-<div class="row">
+<div >
+<ul>
+</ul>
   <% @movies.each do |movie| %>
-    <div class="col">
-      <p><%= movie.overview %></p>
+    
+  <p><%= movie.overview %></p>
       <%= image_tag movie.poster_url, class: 'image-responsive' %>
-    </div>
   <% end %>
 </div>
