@@ -30,6 +30,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'dotenv-rails', groups: [:development, :test]
 end
 
 group :development do
