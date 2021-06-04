@@ -7,6 +7,7 @@
 <div>
 <%= "You haven't saved any movies yet!" if @list.movies.empty? %>    
 </div>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
   <div >
     <% @list.bookmarks.each do |bookmark| %>
@@ -26,5 +27,9 @@
 
   <%= link_to list_path(@list), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this list?' } do %>
     <i class="fas fa-trash-alt"></i> Delete list
+  <% end %>
+    
+  <%= link_to lists_path, class: 'btn btn-primary' do %>
+    <i class="fas fa-trash-alt"></i> Back to lists
   <% end %>
     

@@ -1,15 +1,15 @@
 
 <h1>Save any kind of movies</h1>
-  
+
 <h3 class="mb-0">My Lists</h3>
  
 <% @lists.each do |list| %>
   <ul>
-  <li>
-  <%= link_to list_path(list), class: 'card-category-link' do %>
-            
+  <%= link_to list_path(list), class: 'card-category-link' do %>          
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>)">
   <%= list.name %>
-  </li>
+</div>
+
    
   </ul>
          
